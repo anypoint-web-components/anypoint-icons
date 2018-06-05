@@ -1,0 +1,34 @@
+{
+  "name": "@anypoint-components/anypoint-icons",
+  "version": "3.0.0-preview",
+  "description": "Anypoint icons set.",
+  "keywords": [
+    "web-components",
+    "anypoint",
+    "icons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mulesoft-labs/anypoint-icons.git"
+  },
+  "license": "(C) MuleSoft. All rights reserved.",
+  "author": "Pawel Psztyc",
+  "devDependencies": {
+    "@polymer/gen-typescript-declarations": "^1.1.1",
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.18",
+    "wct-browser-legacy": "^1.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "@polymer/iron-component-page": "^3.0.0-pre.18",
+    "@polymer/iron-test-helpers": "^3.0.0-pre.18"
+  },
+  "main": "arc-icons.js",
+  "scripts": {
+    "test": "polymer test --plugin local",
+    "update-types": "gen-typescript-declarations --deleteExisting --outDir ."
+  },
+  "dependencies": {
+    "@polymer/iron-icon": "^3.0.0-pre.18",
+    "@polymer/iron-iconset-svg": "^3.0.0-pre.18",
+    "@polymer/polymer": "^3.0.0"
+  }
+}

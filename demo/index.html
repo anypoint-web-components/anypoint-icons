@@ -1,0 +1,104 @@
+<!doctype html>
+<!--
+@license
+Copyright 2017 Mulesoft.
+
+All rights reserved.
+-->
+<html>
+<head>
+  <title>arc-icons demo</title>
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script type="module" src="../node_modules/@webcomponents/shadycss/entrypoints/apply-shim.js"></script>
+  <script type="module" src="../node_modules/@polymer/polymer/lib/elements/custom-style.js"></script>
+  <script type="module" src="../node_modules/@polymer/polymer/lib/elements/dom-bind.js"></script>
+  <script type="module" src="../node_modules/@polymer/polymer/lib/elements/dom-repeat.js"></script>
+  <script type="module" src="../node_modules/@polymer/paper-styles/demo-pages.js"></script>
+  <script type="module" src="../node_modules/@polymer/paper-styles/color.js"></script>
+  <script type="module" src="../node_modules/@polymer/iron-flex-layout/iron-flex-layout.js"></script>
+  <script type="module" src="../node_modules/@polymer/iron-icon/iron-icon.js"></script>
+  <!-- load default iconset -->
+  <script type="module" src="../anypoint-icons.js"></script>
+  <custom-style>
+    <style is="custom-style">
+    h2 {
+      text-transform: capitalize;
+    }
+    iron-icon {
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      width: 24px;
+      height: 24px;
+    }
+    iron-icon:hover {
+      fill: var(--google-yellow-700);
+    }
+    .set {
+      margin: auto;
+      padding: 1em 0;
+      border-bottom: 1px solid silver;
+      @apply --layout-horizontal;
+      @apply --layout-wrap;
+    }
+    .set:last-of-type {
+      border-bottom: none;
+    }
+    .set:nth-of-type(4n-3) {
+      color: var(--paper-grey-700);
+    }
+    .set:nth-of-type(4n-2) {
+      color: var(--paper-pink-500);
+    }
+    .set:nth-of-type(4n-1) {
+      color: var(--google-green-500);
+    }
+    .set:nth-of-type(4n) {
+      color: var( --google-blue-500);iron-icon
+    }
+    .container {
+      min-width: 10em;
+      padding: 1em 0.5em;
+      text-align: center;
+      @apply --layout-vertical;
+      @apply --layout-center;
+      @apply --layout-flex;
+    }
+    .container> div {
+      margin-top: 0.5em;
+      color: black;
+      font-size: 10px;
+    }
+    </style>
+  </custom-style>
+</head>
+<body>
+  <dom-bind>
+    <template is="dom-bind" id="scope">
+      <h1>Icons</h1>
+      <dom-repeat id="iconsetRepeat">
+        <template>
+          <h2>{{item.name}}</h2>
+          <div class="set">
+            <dom-repeat items="{{getIconNames(item)}}">
+              <template>
+                <span class="container">
+                  <iron-icon icon="{{item}}"></iron-icon>
+                  <div>{{item}}</div>
+                </span>
+              </template>
+            </dom-repeat>
+          </div>
+        </template>
+      </dom-repeat>
+    </template>
+  </dom-bind>
+  <script type="module">
+import { IronMeta } from '@polymer/iron-meta/iron-meta.js';
+scope.getIconNames = function(iconset) {
+  return iconset.getIconNames();
+};
+scope.parentNode.getIconNames = scope.getIconNames;
+iconsetRepeat.items = new IronMeta({type: 'iconset'}).list;
+</script>
+</body>
+</html>
