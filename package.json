@@ -14,12 +14,12 @@
   "license": "(C) MuleSoft. All rights reserved.",
   "author": "Pawel Psztyc",
   "devDependencies": {
-    "@polymer/gen-typescript-declarations": "^1.1.1",
-    "@polymer/iron-demo-helpers": "^3.0.0-pre.18",
-    "wct-browser-legacy": "^1.0.0",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
-    "@polymer/iron-component-page": "^3.0.0-pre.18",
-    "@polymer/iron-test-helpers": "^3.0.0-pre.18"
+    "@polymer/gen-typescript-declarations": "^1.6.1",
+    "@polymer/iron-component-page": "^3.0.0-pre.21",
+    "@polymer/iron-demo-helpers": "^3.0.2",
+    "@polymer/iron-test-helpers": "^3.0.1",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "wct-browser-legacy": "^1.0.2"
   },
   "main": "arc-icons.js",
   "scripts": {
@@ -27,8 +27,8 @@
     "update-types": "gen-typescript-declarations --deleteExisting --outDir ."
   },
   "dependencies": {
-    "@polymer/iron-icon": "^3.0.0-pre.18",
-    "@polymer/iron-iconset-svg": "^3.0.0-pre.18",
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/iron-icon": "^3.0.1",
+    "@polymer/iron-iconset-svg": "^3.0.1",
+    "@polymer/polymer": "^3.1.0"
   }
 }
