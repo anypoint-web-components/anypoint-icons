@@ -1,6 +1,6 @@
 {
-  "name": "@anypoint-components/anypoint-icons",
-  "version": "3.0.0-preview",
+  "name": "@advanced-rest-client/arc-icons",
+  "version": "3.0.0-preview.1",
   "description": "Anypoint icons set.",
   "keywords": [
     "web-components",
