@@ -28,9 +28,9 @@ Example using the directions-bus icon from the maps icon set:
 @pseudoElement anypoint-icons
 @demo demo/index.html
 */
-const $_documentContainer = document.createElement('template');
-$_documentContainer.setAttribute('style', 'display: none;');
-$_documentContainer.innerHTML = `<iron-iconset-svg size="26" name="anypoint">
+const $documentContainer = document.createElement('template');
+$documentContainer.setAttribute('style', 'display: none;');
+$documentContainer.innerHTML = `<iron-iconset-svg size="26" name="anypoint">
   <svg>
     <defs>
     <g id="add"><path d="M24.39,12.63v1H14.57v9.82h-1V13.67H3.73v-1h9.81V2.8h1v9.81h9.81Z"/></g>
@@ -105,13 +105,13 @@ $_documentContainer.innerHTML = `<iron-iconset-svg size="26" name="anypoint">
     <g id="visibility"><circle cx="13" cy="13" r="3"/><path d="M13,5.5A11.83,11.83,0,0,0,2,13a11.82,11.82,0,0,0,22,0A11.83,11.83,0,0,0,13,5.5ZM13,19c-4.12,0-7.94-3.89-8-6s3.67-6.15,8-6,8,4,8,6S17,19,13,19Z"/></g>
     <g id="visibility-off"><path d="M13.14,10,16,12.86A3,3,0,0,0,13.14,10Z"/><path d="M10.5,7.37A7.44,7.44,0,0,1,13,7c4.21.14,8,4,8,6a5.3,5.3,0,0,1-1.77,3.1l1.5,1.5A11.85,11.85,0,0,0,24,13,11.83,11.83,0,0,0,13,5.5a11.66,11.66,0,0,0-3.74.63Z"/><path d="M4.37,3.81h0l0,0L3.06,5.06,5.89,7.89A11.88,11.88,0,0,0,2,13a11.81,11.81,0,0,0,15.58,6.57l3.23,3.23,1.28-1.28ZM13,19c-4.12,0-7.94-3.89-8-6A5.64,5.64,0,0,1,7.22,9.22l2.92,2.92a3,3,0,0,0,3.72,3.72l2.36,2.36A7.57,7.57,0,0,1,13,19Z"/></g>
     <g id="warning"><rect width="26" height="26" transform="translate(26 26) rotate(-180)" style="fill:none"/><path d="M13,24.00028A11.00028,11.00028,0,0,1,5.22163,5.22163,11.00028,11.00028,0,0,1,20.77838,20.77838,10.92831,10.92831,0,0,1,13,24.00028m0,1A12.00027,12.00027,0,1,0,.99973,13,12.00028,12.00028,0,0,0,13,25.00028h0Z"/><circle cx="13" cy="18.99996" r="2.00039"/><path d="M14,15.126V5.06353a7.79268,7.79268,0,0,0-2,0V15.126A4.03044,4.03044,0,0,1,14,15.126Z"/></g>
-    <g id="anypoint-code-small"><path d="M8.822 3h1.035L7.178 13H6.143L8.822 3zM3.106 5L1 8.008 3.095 11h1.22L2.221 8.008 4.327 5H3.106zm9.788 0h-1.221l2.106 3.008L11.685 11h1.22L15 8.008 12.894 5z"></path></g>
-    <g id="anypoint-copy-to-clipboard-small"><path d="M11 2V1H7v1H4v11h10V2h-3zM8 2h2v1H8V2zm5 10H5V3h2v1h4V3h2v9zM3 14h9v1H2V4h1v10zm5.283-4.744l2.897-4.139.819.574-3.47 4.959-2.528-1.773.574-.819 1.708 1.198z"></path></g>
-    <g id="anypoint-list"><path d="M21 5v1H5V5h16m0 7v1H5v-1h16m0 7v1H5v-1h16m1-15H4v3h18V4zm0 7H4v3h18v-3zm0 7H4v3h18v-3z"></path></g>
-    <g id="anypoint-contextmenu"><path d="M10.5 4.5C10.5 3.119 11.619 2 13 2s2.5 1.119 2.5 2.5S14.381 7 13 7s-2.5-1.12-2.5-2.5zm2.5 6c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5 2.5-1.119 2.5-2.5-1.119-2.5-2.5-2.5zm0 8.5c-1.381 0-2.5 1.12-2.5 2.5S11.619 24 13 24s2.5-1.119 2.5-2.5S14.381 19 13 19z"></path></g>
-    <g id="anypoint-question"><path d="M0,0v20.167h7.646l2.375,3.291l2-3.291h7.896V0H0z M18.916,19.166H1V1h17.917L18.916,19.166L18.916,19.166z"/><path d="M14.343,6.855c0.863,0,1.562-0.699,1.562-1.562c0-0.861-0.699-1.562-1.562-1.562s-1.562,0.7-1.562,1.562 C12.781,6.156,13.48,6.855,14.343,6.855z"/><rect x="3.238" y="6.365" width="6.625" height="1.094"/><rect x="12.113" y="7.772" width="3.312" height="2.5"/><rect x="13.208" y="9.022" width="2.219" height="4.594"/><rect x="12.113" y="13.303" width="4.439" height="2.5"/><rect x="3.238" y="9.708" width="6.625" height="1.095"/><rect x="3.238" y="13.053" width="4.406" height="1.094"/></g>
+    <g id="code-small"><path d="M8.822 3h1.035L7.178 13H6.143L8.822 3zM3.106 5L1 8.008 3.095 11h1.22L2.221 8.008 4.327 5H3.106zm9.788 0h-1.221l2.106 3.008L11.685 11h1.22L15 8.008 12.894 5z"></path></g>
+    <g id="copy-to-clipboard-small"><path d="M11 2V1H7v1H4v11h10V2h-3zM8 2h2v1H8V2zm5 10H5V3h2v1h4V3h2v9zM3 14h9v1H2V4h1v10zm5.283-4.744l2.897-4.139.819.574-3.47 4.959-2.528-1.773.574-.819 1.708 1.198z"></path></g>
+    <g id="list"><path d="M21 5v1H5V5h16m0 7v1H5v-1h16m0 7v1H5v-1h16m1-15H4v3h18V4zm0 7H4v3h18v-3zm0 7H4v3h18v-3z"></path></g>
+    <g id="contextmenu"><path d="M10.5 4.5C10.5 3.119 11.619 2 13 2s2.5 1.119 2.5 2.5S14.381 7 13 7s-2.5-1.12-2.5-2.5zm2.5 6c-1.381 0-2.5 1.119-2.5 2.5s1.119 2.5 2.5 2.5 2.5-1.119 2.5-2.5-1.119-2.5-2.5-2.5zm0 8.5c-1.381 0-2.5 1.12-2.5 2.5S11.619 24 13 24s2.5-1.119 2.5-2.5S14.381 19 13 19z"></path></g>
+    <g id="question"><path d="M0,0v20.167h7.646l2.375,3.291l2-3.291h7.896V0H0z M18.916,19.166H1V1h17.917L18.916,19.166L18.916,19.166z"/><path d="M14.343,6.855c0.863,0,1.562-0.699,1.562-1.562c0-0.861-0.699-1.562-1.562-1.562s-1.562,0.7-1.562,1.562 C12.781,6.156,13.48,6.855,14.343,6.855z"/><rect x="3.238" y="6.365" width="6.625" height="1.094"/><rect x="12.113" y="7.772" width="3.312" height="2.5"/><rect x="13.208" y="9.022" width="2.219" height="4.594"/><rect x="12.113" y="13.303" width="4.439" height="2.5"/><rect x="3.238" y="9.708" width="6.625" height="1.095"/><rect x="3.238" y="13.053" width="4.406" height="1.094"/></g>
     </defs>
   </svg>
 </iron-iconset-svg>`;
 
-document.head.appendChild($_documentContainer.content);
+document.head.appendChild($documentContainer.content);

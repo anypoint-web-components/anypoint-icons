@@ -1,34 +1,68 @@
 {
-  "name": "@advanced-rest-client/anypoint-icons",
-  "version": "3.0.0-preview.1",
+  "name": "@anypoint-web-components/anypoint-icons",
+  "version": "1.0.0",
   "description": "Anypoint icons set.",
+  "license": "(C) MuleSoft. All rights reserved.",
+  "main": "arc-icons.js",
   "keywords": [
     "web-components",
     "anypoint",
     "icons"
   ],
+  "authors": [
+    "Pawel Psztyc",
+    "The Advanced REST client authors <arc@mulesoft.com>"
+  ],
+  "contributors": [
+    "Pawel Psztyc",
+    "The Advanced REST client authors <arc@mulesoft.com>"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mulesoft-labs/anypoint-icons.git"
+    "url": "git://github.com/anypoint-web-components/anypoint-icons.git"
   },
-  "license": "(C) MuleSoft. All rights reserved.",
-  "author": "Pawel Psztyc",
+  "bugs": {
+    "url": "https://github.com/anypoint-web-components/anypoint-icons/issues",
+    "email": "arc@mulesoft.com"
+  },
   "devDependencies": {
-    "@polymer/gen-typescript-declarations": "^1.6.1",
-    "@polymer/iron-component-page": "^3.0.0-pre.21",
-    "@polymer/iron-demo-helpers": "^3.0.2",
-    "@polymer/iron-test-helpers": "^3.0.1",
-    "@webcomponents/webcomponentsjs": "^2.2.7",
-    "wct-browser-legacy": "^1.0.2"
+    "@advanced-rest-client/arc-demo-helper": "^1.0.3",
+    "@advanced-rest-client/testing-karma-sl": "^1.0.2",
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.0",
+    "@open-wc/eslint-config": "^0.4.1",
+    "@open-wc/prettier-config": "^0.1.0",
+    "@open-wc/testing": "^0.11.1",
+    "@open-wc/testing-karma": "^2.0.6",
+    "husky": "^1.0.0",
+    "lint-staged": "^8.0.0",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0",
+    "owc-dev-server": "^0.3.0"
   },
-  "main": "arc-icons.js",
   "scripts": {
-    "test": "polymer test --plugin local",
-    "update-types": "gen-typescript-declarations --deleteExisting --outDir ."
+    "start": "owc-dev-server --open demo",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:legacy": "karma start --legacy --coverage",
+    "test:legacy:watch": "karma start --legacy --auto-watch=true --single-run=false",
+    "test:sl": "karma start karma.sl.config.js --legacy --coverage",
+    "lint:eslint": "eslint --ext .js,.html .",
+    "format:eslint": "eslint --ext .js,.html . --fix",
+    "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
+    "format:prettier": "prettier \"**/*.js\" --write",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "format": "npm run format:eslint && npm run format:prettier"
   },
   "dependencies": {
     "@polymer/iron-icon": "^3.0.1",
-    "@polymer/iron-iconset-svg": "^3.0.1",
-    "@polymer/polymer": "^3.1.0"
+    "@polymer/iron-iconset-svg": "^3.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
