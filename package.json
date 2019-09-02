@@ -26,8 +26,8 @@
     "email": "arc@mulesoft.com"
   },
   "devDependencies": {
-    "@advanced-rest-client/arc-demo-helper": "^1.0.4",
-    "@advanced-rest-client/testing-karma-sl": "^1.0.2",
+    "@advanced-rest-client/arc-demo-helper": "^1.0.14",
+    "@advanced-rest-client/testing-karma-sl": "^1.0.4",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^7.0.0",
     "@open-wc/eslint-config": "^0.4.1",
@@ -36,8 +36,8 @@
     "@open-wc/testing-karma": "^2.0.16",
     "husky": "^1.0.0",
     "lint-staged": "^8.0.0",
-    "lit-element": "^2.0.1",
-    "lit-html": "^1.1.1",
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2",
     "owc-dev-server": "^0.3.0"
   },
   "scripts": {
