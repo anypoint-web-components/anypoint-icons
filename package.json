@@ -1,6 +1,6 @@
 {
   "name": "@anypoint-web-components/anypoint-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Anypoint icons set.",
   "license": "(C) MuleSoft. All rights reserved.",
   "main": "arc-icons.js",
@@ -27,24 +27,27 @@
   },
   "dependencies": {
     "@polymer/iron-icon": "^3.0.1",
-    "@polymer/iron-iconset-svg": "^3.0.1"
+    "@polymer/iron-iconset-svg": "^3.0.1",
+    "lit-element": "^2.2.1"
   },
   "devDependencies": {
     "@advanced-rest-client/arc-demo-helper": "^1.0.14",
-    "@advanced-rest-client/eslint-config": "^1.1.1",
+    "@advanced-rest-client/eslint-config": "^1.1.2",
     "@advanced-rest-client/prettier-config": "^0.1.0",
     "@advanced-rest-client/testing-karma-sl": "^1.0.4",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^7.0.0",
-    "@open-wc/testing": "^2.2.8",
-    "@open-wc/testing-karma": "^3.1.28",
+    "@open-wc/testing": "^2.3.3",
+    "@open-wc/testing-karma": "^3.1.29",
+    "@polymer/gen-typescript-declarations": "^1.6.2",
+    "@polymer/iron-meta": "^3.0.0",
+    "@polymer/test-fixture": "^4.0.2",
+    "chance": "^1.1.0",
+    "deepmerge": "^4.0.0",
+    "es-dev-server": "^1.17.2",
     "husky": "^1.0.0",
     "lint-staged": "^9.2.5",
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2",
-    "deepmerge": "^4.0.0",
-    "karma": "^4.2.0",
-    "es-dev-server": "^1.17.1"
+    "sinon": "^7.4.2"
   },
   "scripts": {
     "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
